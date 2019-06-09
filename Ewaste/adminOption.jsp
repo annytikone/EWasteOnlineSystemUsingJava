@@ -1,0 +1,38 @@
+
+
+<%@page import="java.util.*,java.io.*"%>
+<%
+String uname=(String)session.getAttribute("uname");
+if(uname.equals("null"))
+{
+response.sendRedirect("http://localhost:8080/examples/jsp/Ewaste/page1.jsp");
+}
+%>
+<html>
+<head>
+<title>Options For Admin</title>
+    <link rel="stylesheet" type="text/css" href="adminOption.css">
+</head>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=2REsMF3PfvA">Why E-waste</a></li>
+  <li><a href="process.html">Process</a></li>
+  <li><a href="Contact.html">Contact us</a></li>
+  <li><a href="page1.jsp">logOut</a></li>
+</ul>
+<body>
+    <div class="loginbox">
+<form action="searchUserInfo.jsp">
+<centre><h1> Wants To Know Customer Donation Information </h1>
+Enter Customers Username:<input type="text" name="user">
+<input type="submit" value="search">
+</form></centre>
+<form action="searchUserSellInfo.jsp">
+<centre><h1> Wants To Know Customer Order Information </h1>
+Enter Customers Username:<input type="text" name="user">
+<input type="submit" value="search">
+</form></centre>
+
+<center><button class="button" id="myButton" type="submit" onclick="location.href = 'custDet.jsp';">All Customers Details</button></center><br>
+<center><button class="button" id="myButton" type="submit" onclick="location.href = 'sellUpdateAccept.jsp';">Update Cart List</button></center>
+</body>

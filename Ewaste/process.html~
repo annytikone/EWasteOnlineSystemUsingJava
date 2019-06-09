@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+<title>Process Overflow</title>
+    <link rel="stylesheet" href="process.css">
+<ul>
+  <li><a class="active" href="page1.jsp">Home</a></li>
+  <li><a href="https://www.youtube.com/watch?v=2REsMF3PfvA">Why E-waste</a></li>
+  <li><a href="process.html">Process</a></li>
+  <li><a href="Contact.html">Contact us</a></li>
+  <li><a href="AboutUs.html">About</a></li>
+</ul>
+    
+<body>
+    <div id="header">Process Overflow</div>
+    <div id="container">
+    <p>OUR WORKFLOW</p>
+<div class="m1"><br>E-Waste Management is a complex and multi-layered task.<br>We adopt a systematic, clearly outlined process that includes:<br>
+<br>
+    <div class="y">1.Collection<br></div>
+Our team visits your place and collects your e-Waste materials.<br>
+<br>
+    <div class="y">2.Transportation<br></div>
+The materials are loaded into our specialized carriers and brought to our storage and dismantling facility on the outskirts of Pune<br>
+    <br>
+    <div class="y">3.Segregation<br></div>
+Hazardous substances are identified and separated out.<br>
+<br>
+    <div class="y">4.Dismantling<br></div>
+The systems are dismantled into smaller parts/components so as to facilitate recycling.<br>
+<br>
+    <div class="y">5.Recycling<br></div>
+    Actual recycling in an eco-friendly way takes place as per stringent norms laid down by the authorities.<br></div>
+    </div>
+</body>
+</html>

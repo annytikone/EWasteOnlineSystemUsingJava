@@ -1,0 +1,82 @@
+<%@page import="java.util.*,java.io.*" %>
+<%
+String uname=(String)session.getAttribute("uname");
+if(uname.equals("null"))
+{
+response.sendRedirect("http://localhost:8080/examples/jsp/Ewaste/page1.jsp");
+}
+%>
+<html>
+<head>
+<title>cust Details</title>
+    <link rel="stylesheet" type="text/css" href="page1.css">
+<ul>
+
+  <li><a href="https://www.youtube.com/watch?v=2REsMF3PfvA">Why E-waste</a></li>
+  <li><a href="process.html">Process</a></li>
+  <li><a href="#contact">Contact us</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a class="active" href="page1.jsp">LogOut</a></li>
+</ul>
+</head>
+</html>
+<%@ page import="java.util.*"%>
+<%@ page import="java.exception.*"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.io.*"%>
+<%@ page import="java.text.*"%>
+<%! int total=0;  %>
+<%
+
+//if(request.getParameter("submit")!=null)
+//{	
+	String[] a=request.getParameterValues("sdevice");
+
+	//String b[]=request.getParameterValues("price");
+	Statement stmt=null,stmt1=null;
+	Connection con=null;
+	PreparedStatement pstmt=null;
+	ResultSet rs=null;
+	
+	try
+	{
+		Class.forName("org.postgresql.Driver");
+		con=DriverManager.getConnection("jdbc:postgresql:ep","postgres","postgres");
+		stmt=con.createStatement();
+		stmt1=con.createStatement();
+		
+	for(int i=0;i<a.length;i++)
+		{
+		stmt.executeUpdate("insert into usersell (username,sdevice) values('"+uname+"','"+a[i]+"')"); 
+	}
+	
+ResultSet rs1;
+total=0;
+	for(int i=0;i<a.length;i++)
+			{rs1=stmt1.executeQuery("select sell.price from sell where sdevice='"+a[i]+"';");
+rs1.next();
+
+			total=total+rs1.getInt(1);
+			
+			}
+	out.print("<center><h3 style='color:white'>Your Total Value Is" +total+"</h3></center>");
+}
+	catch(Exception e)
+	{
+	        out.println(e);
+                 out.println("<script type=\"text/javascript\">");
+                out.println("alert('fail to update');");
+                out.println("location='Sell.jsp';");
+                out.println("</script>");
+
+}
+/*}
+else {
+	 out.println("<script type=\"text/javascript\">");
+		out.println("alert('update failed');");
+		out.println("location='Sell.jsp';");
+		out.println("</script>");
+
+}*/		
+%>
+

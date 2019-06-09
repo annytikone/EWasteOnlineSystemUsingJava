@@ -1,0 +1,106 @@
+
+
+body {
+  height:100%;
+    background-size: cover;
+    background-position: center;
+
+}
+h1 {
+    text-align: center;
+  font-style: oblique;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  font-weight: bold;
+     text-shadow: 2px 2px 5px red;
+
+}
+h2 { color:blue;
+    text-align: center;
+  font-style: oblique;
+  
+font-face:"verdana";
+  font-size: 70px;
+  font-weight: bold;
+     text-shadow: 2px 2px 5px red;
+}
+h3 { color:red;
+    text-align: center;
+  font-style: italic;
+  
+font-face:"sans-serif";
+  font-size: 40px;
+  font-weight: bold;
+     text-shadow: 2px 2px blue;
+}
+.submit {
+
+background: red;
+
+color: #fff;
+
+border: 1px solid #eee;
+
+border-radius: 20px;
+
+box-shadow: 5px 5px 5px red;
+
+text-shadow:none;
+font-weight: bold;
+font-size: 24px;
+font-family: "Times New Roman", Times, serif;
+text-align: center;
+height:30px;
+width:600px:
+}
+
+.form-submit-button:hover {
+
+background: #016ABC;
+
+color: #fff;
+
+border: 1px solid #eee;
+
+border-radius: 20px;
+
+box-shadow: 5px 5px 5px #eee;
+
+text-shadow:none;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.button{text-align: center;
+     font-size: 20px;
+       background-color: whitesmoke;
+  margin:auto;
+}
+button:hover{
+     background-size:  100% 100%;
+    color: red;
+  transform:scale(1.2,1.2);
+  transform-origin:center;
+}

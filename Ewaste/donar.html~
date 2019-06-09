@@ -1,0 +1,22 @@
+
+<%@page import="java.util.*,java.io.*"%>
+<%
+String uname=(String)session.getAttribute("uname");
+if(uname.equals("null"))
+{
+response.sendRedirect("http://localhost:8080/examples/jsp/Ewaste/page1.jsp");
+}
+%>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body background="h2.gif">
+<form action="thanku.html" method="get">
+<h2>we appreciate that you have taken a step to save this world by giving your e-waste at proper place..</h2>
+<center><h3>enter e-waste details here:</h3>
+<textarea rows=5 cols=50>  </textarea><br>
+<input  class="submit" type="submit" name="submit" value="submit"></center><br>
+</body>
+</html>

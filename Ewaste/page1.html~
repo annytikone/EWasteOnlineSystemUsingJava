@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="page1.css">
+<ul>
+  <li><a class="active" href="page1.html">Home</a></li>
+  <li><a href="https://www.youtube.com/watch?v=2REsMF3PfvA">Why E-waste</a></li>
+  <li><a href="process.html">Process</a></li>
+  <li><a href="#contact">Contact us</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<body>
+    <div class="loginbox">
+    <img src="logo.png" class="avatar">
+        <h1>Customers Login</h1>
+        <form action="loginAction.jsp" method="get">
+            <p>Username</p>
+            <input type="text" name="user" id="user" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="pass" id="pass" placeholder="Enter Password">
+            <input type="submit" name="login" value="Login">
+            <a href="lostPassword.html">Lost your password?</a>
+            <c><a href="page1.html">Login as Customer?</a></c><br>
+            <a href="signUp.html">Don't have an account?</a>
+        </form>
+        
+    </div>
+
+</body>
+</head>
+</html>

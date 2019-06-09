@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>SignUp Page</title>
+    <link rel="stylesheet" type="text/css" href="signUp.css">
+<ul>
+  <li><a class="active" href="page1.jsp">Home</a></li>
+  <li><a href="https://www.youtube.com/watch?v=2REsMF3PfvA">Why E-waste</a></li>
+  <li><a href="process.html">Process</a></li>
+  <li><a href="#contact">Contact us</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<script>
+function myFinction()
+{
+var username=document.form.username.value;
+var fname=document.form.fname.value;
+var lname=document.form.lname.value;
+var mobnum=document.form.mobnum.value;
+var add=document.form.add.value;
+if(user=="" || pass=="" || fname="" || lname="" || mobnum="" || add="")
+{
+	document.getElementById('mydiv').innerHTML="Please enter all details";
+	return false;
+}
+var pass1=document.form.pass.value;
+var pass2=document.form.cpass.value;
+if(pass1 != pass2)
+{
+alert("Password do not match");
+return false;
+}
+else
+{
+alert(Password match!!!");
+document.getElementById("signUp").submit();
+}
+}
+</script>
+</head>
+<body>
+    <div class="loginbox">
+    <img src="logo.png" class="avatar">
+        <h1>Registeration Form</h1>
+        <form action="signUp.jsp" id="signUp" onSubmit='return myFinction()' method="get">
+            <p>First Name</p>
+            <input type="text" name="fname" placeholder="First Name">
+            <p>Last Name</p>
+            <input type="text" name="lname" placeholder="Last Name">
+		<p>User Name</p>
+            <input type="text" name="username" placeholder="username">
+            <p>Mobile Number</p>
+            <input type="text" name="mobnum" placeholder="Mobile Number">
+            <p>Address</p>
+            <input type="text" name="add" placeholder="Address">
+            <p>Password</p>
+            <input type="password" name="pass" placeholder="password" value="">
+             <p>Confirm Password</p>
+            <input type="password" name="cpass" placeholder="password" value="">
+			<center><font color="red"><div id='mydiv'></div></font></center>
+            <input type="submit" name="signup" value="SignUp">
+            <c><a href="page1.jsp">Login as Customer?</a></c><br>
+        </form>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+background: 100% 100%;
+background:url(back2.png)no-repeat center center fixed;
+}
+#header
+{
+ animation:a1 2.0s infinite;
+    width: 100%;
+	height:50px;
+    font-size:80px;
+	text-align:center;
+}
+@keyframes a1 {
+    0%   {color:blue; left:0px; top:0px;}
+  50%  {color:yellow; left:200px; top:200px;}
+  100% {color:blue; left:0px; top:0px;}
+}
+p
+{
+    animation:p1 1.5s infinite;
+    margin-top: 15%;
+    width: 100%;
+	height:70px;
+    font-size:60px;
+    font-family:monospace;
+    color: #FF8C00;
+	text-align:center;
+}
+@keyframes p1 {
+    0%   {font-weight:bolder;font-size: 90px;}
+     25%{font-weight:bolder;font-size: 90px;}
+  50%{font-weight:normal;font-size: 60px;}
+    75% {font-weight:bolder;font-size: 90px;}
+  100% {font-weight:bolder;font-size: 90px;}
+}
+.m1{
+     margin-top: 15%;
+    width: 100%;
+	height:70px;
+    font-size:30px;
+    color:#FF8C00;
+    font-style:oblique;
+    font-weight: bolder;
+}
+#container
+{
+    height: 190%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.y
+{
+    font-size: 35px;
+    font-family: fantasy;
+    color: black;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}

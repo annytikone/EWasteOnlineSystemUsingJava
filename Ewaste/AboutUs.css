@@ -1,0 +1,107 @@
+*{
+	margin:0;
+	padding:0;
+}
+#header {
+	 animation:b1 2.0s infinite;
+	margin-top:5%;
+	color:#C71585;
+    width: 100%;
+	height:50px;
+    font-size:30px;
+	text-align:center;
+    font-size:80px;
+}
+@keyframes b1 {
+    0%   {color:yellow; left:0px; top:0px;}
+  50%  {color:green; left:200px; top:200px;}
+  100% {color:yellow; left:0px; top:0px;}
+}
+
+#container {
+    width:100%;
+	margin:auto;
+}
+#g1
+{
+ animation:blinkingText 1.5s infinite;	
+}
+@keyframes blinkingText{
+    0%{     color:#C71585; }
+    49%{    color: transparent; }
+    50%{    color: #C71585; }
+    99%{    color:transparent;  }
+    100%{   color: #C71585;    }
+}
+#m1
+{
+ animation:blinkingText 1.5s infinite;	
+}
+@keyframes blinkingText{
+    0%{     color:yellow; }
+    49%{    color: transparent; }
+    50%{    color: yellow; }
+    99%{    color:transparent;  }
+    100%{   color: yellow;    }
+}
+.f1
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+#first{
+	margin-left:2%;
+	border-width:medium;
+	border-style:solid;
+	background-color:grey;
+	margin-top:5%;
+    width: 500px;
+    float: left;
+    height: 230px;
+	font-size:30px;
+	text-align:center;
+}
+#second {
+	margin-right:2%;
+	border-width:medium;
+	border-style:solid;
+	background-color:grey;
+	margin-top:5%;
+    width: 530px;
+    float: right;
+    height: 230px;
+	font-size:30px;
+	text-align:center;
+}
+
+#clear {
+    clear: both;
+}
+body
+{
+ background: url(back.jpg) no-repeat center center fixed; 
+ background-size: 100% 100%;
+}ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}

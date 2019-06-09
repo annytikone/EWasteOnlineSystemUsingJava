@@ -1,0 +1,36 @@
+
+<%@page import="java.util.*,java.io.*" session="true"%>
+<%
+String user=(String)session.getAttribute("uname");
+if(user.equals("null"))
+{
+response.sendRedirect("http://localhost:8080/examples/jsp/Ewaste/page1.jsp");
+}
+%>
+<html>
+<head>
+<link rel="stylesheet" href="donar.css">
+<ul>
+
+  <li><a href="https://www.youtube.com/watch?v=2REsMF3PfvA">Why E-waste</a></li>
+  <li><a href="process.jsp">Process</a></li>
+  <li><a href="Contact.html">Contact us</a></li>
+  <li><a href="AboutUs.html">About</a></li>
+  <li><a class="active" href="page1.jsp">LogOut</a></li>
+</ul>
+</head>
+<div class="donar">
+<body background="h2.gif">
+<form action="donarDataSucc.jsp" method="get">
+<h2 color="white">we appreciate that you have taken a step to save this world by giving your e-waste at proper place..</h2>
+<centre>Device Name:<input type="text" name="wname"><br></centre>
+<centre>Condition Of Device:<select name="options"><option value="Working">working</option>
+<option value="NotWorking">Not working</option>
+<option value="NeedToRecycle">Need To Recycle</option>
+</select><br></centre>
+<centre>Weight Of Device:<input type="text" name="wweight"><br></centre>
+<centre>Quantity:<input type="text" name="wqnt"><br></centre>
+<input  class="submit" type="submit" name="submit" value="submit"></center><br>
+</body>
+</div>
+</html>

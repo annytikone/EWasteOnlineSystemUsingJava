@@ -1,0 +1,42 @@
+<html>
+<head> 
+<title>Contact Us</title>
+
+<div class="p1"><ul>
+  <li><a class="active" href="page1.jsp">Home</a></li>
+  <li><a href="https://www.youtube.com/watch?v=2REsMF3PfvA">Why E-waste</a></li>
+  <li><a href="process.jsp">Process</a></li>
+  <li><a href="Contact.html">Contact us</a></li>
+  <li><a href="AboutUs.html">About</a></li>
+</ul></div>
+
+</head>
+
+<link rel="stylesheet" type="text/css" href="contact.css">
+<p id="header1">&#9742; Contact Us-<b>Admin Alex:180050212</b></p>
+<p id="header1">&#9993; Mail-<b>AshishEwaste@gmail.com</b></p>
+
+<body>
+<div class="container">
+<form action="contactMail.jsp" method="post">
+<header style="text-align:center" id="header">Contact Us</header>
+<label for="fname"><b>First Name:</b></label>
+<input type="text" id="fname" name="fname" placeholder="First name"><br>
+<label for="lname"><b>Last Name:</b></label>
+<input type="text" id="lname" name="lname" placeholder="Last name"><br>
+<label><b>Area</b></label>
+<b><select id="area" name="area">
+<option value="Pimpri">Pimpri</option>
+<option value="Chincwad">Chinchwad</option>
+<option value="Thergaon">Thergaon</option>
+<option value="Wakad">Wakad</option>
+</select></b><br>
+<label for="subject"><b>Subject:</b></label>
+<input type="text" id="subject" name="subject" placeholder="Subject"><br>
+<b><label>message</label><br>
+<textarea id="subject" name="msg" placeholder="Write Something..." style="height:200px"></textarea><br>
+<input type="submit" value="Submit"></b>
+</form>
+</div>
+</body>
+</html>

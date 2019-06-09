@@ -1,0 +1,168 @@
+[root@ashish Desktop]# su - postgres
+-bash-4.1$ psql
+psql (8.4.20)
+Type "help" for help.
+
+postgres=# \c ep;
+psql (8.4.20)
+You are now connected to database "ep".
+ep=# \d
+          List of relations
+ Schema |   Name   | Type  |  Owner   
+--------+----------+-------+----------
+ public | admin    | table | postgres
+ public | customer | table | postgres
+ public | sell     | table | postgres
+ public | usersell | table | postgres
+ public | waste    | table | postgres
+(5 rows)
+
+ep=# \d admin;
+             Table "public.admin"
+  Column  |         Type          | Modifiers 
+----------+-----------------------+-----------
+ fname    | character varying(20) | 
+ lname    | character varying(20) | 
+ add      | character varying(20) | 
+ mobnum   | character varying(20) | 
+ username | character varying(20) | 
+ password | character varying(20) | not null
+Indexes:
+    "admin_username_key" UNIQUE, btree (username)
+
+ep=# \d customer;
+           Table "public.customer"
+  Column  |         Type          | Modifiers 
+----------+-----------------------+-----------
+ fname    | character varying(30) | 
+ lname    | character varying(30) | 
+ add      | character varying(30) | 
+ mobnum   | character varying(20) | 
+ username | text                  | not null
+ password | character varying(10) | 
+Indexes:
+    "customer_pkey" PRIMARY KEY, btree (username)
+Referenced by:
+    TABLE "usersell" CONSTRAINT "usersell_username_fkey" FOREIGN KEY (username) REFERENCES customer(username)
+    TABLE "waste" CONSTRAINT "waste_username_fkey" FOREIGN KEY (username) REFERENCES customer(username)
+
+ep=# \d sell;
+             Table "public.sell"
+  Column  |         Type          | Modifiers 
+----------+-----------------------+-----------
+ sdevice  | text                  | not null
+ scompany | character varying(20) | 
+ price    | integer               | 
+Indexes:
+    "sell_pkey" PRIMARY KEY, btree (sdevice)
+Referenced by:
+    TABLE "usersell" CONSTRAINT "usersell_sdevice_fkey" FOREIGN KEY (sdevice) REFERENCES sell(sdevice)
+
+ep=# \d waste;
+              Table "public.waste"
+   Column   |         Type          | Modifiers 
+------------+-----------------------+-----------
+ wname      | character varying(20) | 
+ wcondition | character varying(20) | 
+ wweight    | character varying(20) | 
+ wqnt       | character varying(10) | 
+ wid        | text                  | not null
+ username   | text                  | 
+Indexes:
+    "waste_pkey" PRIMARY KEY, btree (wid)
+Foreign-key constraints:
+    "waste_username_fkey" FOREIGN KEY (username) REFERENCES customer(username)
+
+ep=# \d usersell;
+   Table "public.usersell"
+  Column  | Type | Modifiers 
+----------+------+-----------
+ username | text | 
+ sdevice  | text | 
+Foreign-key constraints:
+    "usersell_sdevice_fkey" FOREIGN KEY (sdevice) REFERENCES sell(sdevice)
+    "usersell_username_fkey" FOREIGN KEY (username) REFERENCES customer(username)
+
+ep=# 
+ep=# 
+ep=# 
+ep=# 
+ep=# 
+ep=# 
+ep=# 
+ep=# 
+ep=# 
+ep=# select * from admin;
+ fname  | lname  | add  |   mobnum   | username | password 
+--------+--------+------+------------+----------+----------
+ Aniket | Tikone | pune | 8668695116 | Alex     | anny
+(1 row)
+
+ep=# select * from customer;
+   fname   |  lname  |   add    |    mobnum     |  username   | password 
+-----------+---------+----------+---------------+-------------+----------
+ Aniket    | Tikone  | Pune     | 8668695116    | annytikone9 | anny
+ Mayur     | Yadav   | pune     | 123           | mayu        | 123
+ Shraddha  | Kudale  | pune     | 123456        | shaddi      | 123
+ Priya     | Biradar | Kolkatta | 86698758      | Piyu        | 123
+ Dipti     | Mane    | Pune     | 456789        | dipti       | 123
+           |         |          |               |             | 
+ Raju      | Yadav   | Pune     | 444556466     | rj          | 123
+ Indrajeet | Yadav   | Pune     | 789789798     | inda        | 123
+ Ashly     | John    | Pune     | 5897898956    | ashu12      | 123
+ babli     | singh   | pune     | 9988223366    | chameli     | 
+ kiran     | dubey   | mm       | 111111111111  | dk          | 
+ ajyftf    | jygfyf  | uhiuuih  | 123546556     | hhhg        | 
+ Ravi      | Chavan  | pp       | 5454545545454 | ravi        | 123
+(13 rows)
+
+ep=# select * from waste;
+ wname  |  wcondition   | wweight | wqnt |          wid          |  username   
+--------+---------------+---------+------+-----------------------+-------------
+ Tv     | NotWorking    | 20      | 1    | 0.43016411230235285   | shaddi
+ Fridge | NotWorking    | 12      | 1    | 0.9587974675973291    | Piyu
+ Brain  | NeedToRecycle | 1.30    | 1    | 0.0037473472795978013 | dipti
+ asasas | NotWorking    | 12      | 12   | 0.9407100199652072    | mayu
+ Laptop | Working       | 2.5     | 1    | 0.8703436813525923    | rj
+ Amya   | NeedToRecycle | 15      | 1    | 0.6860990459761857    | inda
+ Mobile | NeedToRecycle | 1       | 1    | 0.8497117456480128    | ashu12
+ BIKE   | NotWorking    | 120     | 1    | 0.8707288027695828    | annytikone9
+ laptop | NotWorking    | 12      | 1    | 0.7989514054549351    | annytikone9
+ gadi   | NeedToRecycle | 456     | 1    | 0.20404444868754446   | ravi
+ wires  | NotWorking    | 12      | 1    | 0.7250886770720412    | annytikone9
+ gadyde | Working       | 1       | 1    | 0.33036959823680034   | annytikone9
+ ac     | Working       | 1       | 1    | 0.8160162420633587    | annytikone9
+(13 rows)
+
+ep=# select * from sell;
+  sdevice  | scompany |  price  
+-----------+----------+---------
+ Mobilesss | Samsung  |       1
+ Fridge    | Biradar  |    1200
+ brain     | Mane     |   14565
+ Car       | yadav    |   34200
+ ani       | tikone   |    1200
+ Laptop    | Yadav    |  120000
+ Amya      | Yz       | 9000000
+ Mobile    | Ashly    |  124556
+ asdadasd  | adfadf   |      12
+ gai       | chavan   |    1245
+ file      | waste    |    1200
+ wires     | Samsung  |      10
+(12 rows)
+
+ep=# select * from usersell;
+  username   |  sdevice  
+-------------+-----------
+ inda        | brain
+ ravi        | Fridge
+ ravi        | Laptop
+ ravi        | asdadasd
+ annytikone9 | Car
+ annytikone9 | ani
+ annytikone9 | Mobilesss
+ annytikone9 | Fridge
+(8 rows)
+
+ep=# 
+

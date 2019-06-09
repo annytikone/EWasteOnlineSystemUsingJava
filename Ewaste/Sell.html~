@@ -1,0 +1,57 @@
+<html>
+<head> <link rel="stylesheet" href="Sell.css"></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Selling Page</title><div class="header"><b>Items for Sale</b></div>
+    <body>
+    <div id="container">
+          <div id="first">
+              <table><tr><th>Electronic<br>Devices</th><th>Additional<br>Information</th><th>Checkout</th></tr>
+                  <tr class="p1"><td>Tv&nbsp;<input type="image" class="icon" img src="tv.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>CellPhone<input type="image" class="icon" img src="cellphone.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Refrigerator&nbsp;<input type="image"  class="icon" img src="refrigerator.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Fan&nbsp;<input type="image"  class="icon" img src="fan.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Printer&nbsp;<input type="image"  class="icon" img src="printer.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Cables&nbsp;<input type="image"  class="icon" img src="wires.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Calculators&nbsp;<input type="image"  class="icon" img src="calculator.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Cathode Ray Tube Monitors (CRTs)&nbsp;<input type="image"  class="icon" img src="crt.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>CD/DVD Players&nbsp;<input type="image"  class="icon" img src="cdplayer.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Chargers&nbsp;<input type="image"  class="icon" img src="charger.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+                  <tr class="p1"><td>Digital Cameras &nbsp;<input type="image"  class="icon" img src="camera.png"></td>
+                   <td>Working</td><td><input type="checkbox"></td></tr>
+                  
+              </table></div>
+    <div id="second">
+        <table><tr><th>Electronic<br>Devices</th><th>Additional<br>Information</th><th>Checkout</th></tr>
+                  <tr class="p1"><td>Dry Cell Batteries&nbsp;<input type="image" class="icon" img src="dry.png.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+                  
+            <tr class="p1"><td>External Hard Drives&nbsp;<input type="image" class="icon" img src="external.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+            <tr class="p1"><td>Radios&nbsp;<input type="image"  class="icon" img src="radio.png.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+            <tr class="p1"><td>Routers&nbsp;<input type="image"  class="icon" img src="routers.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+            <tr class="p1"><td>Speakers&nbsp;<input type="image"  class="icon" img src="speaker.png.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+            <tr class="p1"><td>Telephone<br>Sets &nbsp;<input type="image"  class="icon" img src="telephone.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+            <tr class="p1"><td>Video Game Systems &nbsp;<input type="image"  class="icon" img src="video.png.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+            <tr class="p1"><td>Walkie Talkies&nbsp;<input type="image"  class="icon" img src="walkie.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+            <tr class="p1"><td>Fax Machines &nbsp;<input type="image"  class="icon" img src="fax.png"></td><td>Working</td><td><input type="checkbox"></td></tr>
+            
+        </table></div>
+        </div>
+
+    </body>
+</html>
